@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  margin: 0;
+  color: #121721;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121721;
+  color: #fff;
+}
+
+.app {
+  width: 300px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #5964e0;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.logo {
+  font-weight: 700;
+  margin: 0;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 18px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5964e0;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.search-bar {
+  margin-top: 1rem;
+  display: flex;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.filter {
+  background: #5964e0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.job-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.job-card {
+  display: flex;
+  align-items: start;
+  gap: 0.8rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s;
+}
+
+body.dark .job-card {
+  background: #19202d;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.scoot { background: #e99210; }
+.blogg { background: #f44e77; }
+.vector { background: #34353f; }
+.office { background: #2b7fc3; }
+
+.details h3 {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+
+.details .time {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.details .company {
+  font-size: 0.85rem;
+  color: #5964e0;
+}
+
+.details .location {
+  color: #5964e0;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}

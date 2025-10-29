@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f4f6f8;
+  color: #19202D;
+}
+
+.header {
+  background: #5964E0;
+  color: white;
+  padding: 40px 0 60px;
+  position: relative;
+}
+
+.logo {
+  margin-left: 150px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.search-bar {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  display: flex;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.input {
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  flex: 1;
+}
+
+.location-input {
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.filter label {
+  font-size: 14px;
+  color: #6e8098;
+}
+
+.search-btn {
+  background-color: #5964E0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 100px 150px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.job-card .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #eef;
+  position: absolute;
+  top: -25px;
+}
+
+.job-card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+  color: #19202D;
+}
+
+.job-card .company {
+  color: #6e8098;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.job-card .location {
+  color: #5964E0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.job-card .time {
+  color: #6e8098;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .jobs {
+    padding: 80px 20px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    width: 90%;
+    bottom: -60px;
+  }
+
+  .filter {
+    justify-content: space-between;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}
